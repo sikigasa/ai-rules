@@ -1,4 +1,4 @@
-# Go Architecture Patterns
+# Go バックエンド設計パターン
 
 ## Task-Controller に近い構成
 

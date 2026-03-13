@@ -1,13 +1,13 @@
 ---
 name: go-backend-review
-description: 'Review or debug a Go backend change. Use for golang code review, regression hunting, repository and usecase boundary checks, DI wiring, gRPC or Echo routes, migration completeness, config mistakes, and test gaps in Task-Controller-style or hal-cinema-style backends.'
-argument-hint: 'Describe the PR, bug, or area to review in the Go backend'
+description: 'Go バックエンド変更のレビューやデバッグに使う。golang code review、回帰調査、repository と usecase の境界確認、DI 配線、gRPC や Echo の route、migration の完了性、config ミス、test の抜けを確認する。Task-Controller と hal-cinema backend の構成向け。'
+argument-hint: 'レビューしたい PR、バグ、調査したい Go バックエンド領域を記述する'
 user-invocable: true
 ---
 
-# Go Backend Review
+# Go バックエンドレビュー
 
-## When to Use
+## 使う場面
 
 - Go バックエンドのレビューをするとき
 - 変更がレイヤ境界を壊していないか確認したいとき
@@ -15,11 +15,11 @@ user-invocable: true
 - migration, config, Docker, Makefile まで含めた変更漏れを洗いたいとき
 - gRPC や Echo の挙動不整合、DB 更新漏れ、transaction の境界ミスを疑うとき
 
-## Review Reference
+## 参照資料
 
 レビュー前に [review-checklist.md](./references/review-checklist.md) を確認します。
 
-## Procedure
+## 手順
 
 1. 変更差分から、どのリクエスト経路または起動経路に影響するかを特定する。
 2. router または service registration から、controller, usecase, repository まで到達できるかを確認する。
@@ -28,7 +28,7 @@ user-invocable: true
 5. config や env の追加がある場合、デフォルト値、読み込み位置、ローカル起動手順の破綻がないか確認する。
 6. テストが不足している場合は、どのケースが未検証かを具体的に指摘する。
 
-## Focus Areas
+## 注目観点
 
 - レイヤ責務の崩れ
 - DI や constructor 配線漏れ
@@ -38,7 +38,7 @@ user-invocable: true
 - エラー処理の粒度不足
 - integration test 不足
 
-## Output Style
+## 出力方針
 
 - 問題は重大度順に並べる
 - 可能なら root cause を書く

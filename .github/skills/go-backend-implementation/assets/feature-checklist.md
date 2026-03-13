@@ -1,8 +1,8 @@
-# Feature Checklist
+# 実装チェックリスト
 
 - どの層に機能を置くかを先に決めたか
 - interface と実装の両方を更新したか
-- constructor または DI container の配線を更新したか
+- constructor または DI コンテナの配線を更新したか
 - router, handler, controller, service 登録を確認したか
 - request と response の変換責務が薄いままか
 - transaction が必要な処理を usecase 側でまとめたか
